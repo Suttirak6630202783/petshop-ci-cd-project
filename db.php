@@ -1,7 +1,7 @@
 <?php
 $host = "petshop-db.c52yk80igyaj.ap-southeast-2.rds.amazonaws.com";
 $user = "admin";
-$pass = "petshop1234";
+$pass = "Toon14789632!";
 $dbname = "petshop";
 
 $conn = mysqli_connect($host, $user, $pass, $dbname);
