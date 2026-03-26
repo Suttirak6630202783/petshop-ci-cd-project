@@ -45,4 +45,4 @@ jobs:
             docker pull suttirakpimsuk/petshop-app:latest
             docker stop petshop-container || true
             docker rm petshop-container || true
-            docker run -d --name petshop-container -p 80:80 your-username/petshop-app:latest
+            docker run -d --name petshop-container -p 80:80 suttirakpimsuk/petshop-app:latest
