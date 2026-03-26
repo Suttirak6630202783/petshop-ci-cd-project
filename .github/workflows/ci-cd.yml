@@ -28,7 +28,7 @@ jobs:
           context: .
           push: true
 
-          tags: pimsuksuttirak/petshop-app:latest 
+          tags: pimsuksuttirak/devop830-pipline:latest 
 
   deploy:
     needs: build-and-push-docker-image
@@ -42,7 +42,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
 
-            docker pull pimsuksuttirak/petshop-app:latest
+            docker pull pimsuksuttirak/devop830-pipline:latest
             docker stop petshop-container || true
             docker rm petshop-container || true
-            docker run -d --name petshop-container -p 80:80 pimsuksuttirak/petshop-app:latest
+            docker run -d --name petshop-container -p 80:80 pimsuksuttirak/devop830-pipline:latest
