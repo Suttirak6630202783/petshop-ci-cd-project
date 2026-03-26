@@ -28,7 +28,7 @@ jobs:
           context: .
           push: true
 
-          tags: suttirakpimsuk/petshop-app:latest 
+          tags: pimsuksuttirak/petshop-app:latest 
 
   deploy:
     needs: build-and-push-docker-image
@@ -42,7 +42,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             # สั่งให้ Server ดึง Image ใหม่และรัน Container ของ PETSHOP
-            docker pull suttirakpimsuk/petshop-app:latest
+            docker pull pimsuksuttirak/petshop-app:latest
             docker stop petshop-container || true
             docker rm petshop-container || true
-            docker run -d --name petshop-container -p 80:80 suttirakpimsuk/petshop-app:latest
+            docker run -d --name petshop-container -p 80:80 pimsuksuttirak/petshop-app:latest
