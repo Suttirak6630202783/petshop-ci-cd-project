@@ -33,7 +33,7 @@ $result = mysqli_query($conn, "SELECT * FROM products ORDER BY id DESC");
 
                         <div class="product-body">
                             <h3><?= $row['name']; ?></h3>
-                            <p class="detail"><?= $row['detail']; ?></p>
+                            <p class="detail"><?= $row['description']; ?></p>
                             <p class="price">ราคา <?= number_format($row['price']); ?> บาท</p>
 
                             <div class="card-actions">
