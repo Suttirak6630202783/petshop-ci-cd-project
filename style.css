@@ -1,0 +1,447 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #222;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  background: #ffc300;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+/* กล่องซ้าย */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 1;
+}
+
+.nav-left img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* กล่องขวา */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 1;
+}
+
+.nav-right a,
+.nav-right button {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* แก้ตัวอักษรล้นขอบ */
+.nav-left a,
+.nav-right a,
+.profile-info span {
+  white-space: nowrap;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Logout Button */
+.logout-btn {
+  font-weight: 600;
+  color: #000;
+}
+
+/* ===== BANNER ===== */
+.banner {
+  width: 100%;
+  aspect-ratio: 1440 / 810;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===== CONTENT ===== */
+.container {
+  width: 80%;
+  margin: auto;
+  max-width: 900px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.container h1 {
+  font-size: 40px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.container h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  color: #444;
+}
+
+.container p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #ffc300;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: auto;
+  font-size: 16px;
+  border-top: 3px solid #e0b000;
+}
+
+/* ===== LOGIN / REGISTER FORM ===== */
+.form-wrapper {
+  width: 450px;
+  background: #ffc300;
+  margin: 60px auto;
+  padding: 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.form-top {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 0 0 30px 30px;
+}
+
+.form-top label {
+  font-weight: 600;
+}
+
+.form-top input,
+.form-top textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 2px solid #e6e6e6;
+  font-size: 15px;
+}
+
+.form-btn {
+  width: 70%;
+  background: #fdff47;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background: #f5f52f;
+}
+
+/* Banner ด้านล่างของฟอร์ม */
+.form-banner {
+  width: 100%;
+  background: url("img/PETSHOP\ INVENTORY.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 260px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.form-banner-text {
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  font-size: 28px;
+}
+
+.message {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* ===== ADD BANNER ===== */
+.add-banner {
+  background: #ffc300;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.add-banner h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+/* .add-banner p {
+  margin-top: 8px;
+  font-size: 18px;
+} */
+
+/* ===== ADD PRODUCT ===== */
+.add-product-wrapper {
+  background: #ffc300;
+  padding: 50px 0;
+}
+
+.add-product-box {
+  background: #fff;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== FORM ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-grid-full {
+  grid-column: 1 / -1;
+}
+.form-grid-full:hover {
+  transform: translateY(-4px);
+  transition: transform 1s ease, box-shadow 0.18s ease;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 15px;
+}
+
+/* ===== UPLOAD ===== */
+/* ===== UPLOAD IMAGE (EDIT) ===== */
+.upload-box {
+  border: 2px dashed #ccc;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.preview-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.upload-text {
+  margin-bottom: 15px;
+}
+
+.upload-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.upload-desc {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ซ่อน input file แต่ยังคลิกได้ */
+.upload-box input[type="file"] {
+  position: absolute;
+  left: -9999px;
+}
+
+/* ปุ่ม */
+.browse-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  background: #ffc300;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.browse-btn:hover {
+  background: #e6b000;
+  transform: translateY(-2px);
+}
+
+/* ===== SUBMIT ===== */
+.submit-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 15px;
+  background: #ffc300;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.submit-btn:hover {
+  background: #e6b000;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* ===== SHOW PAGE BANNER ===== */
+.show-banner {
+  width: 100%;
+  aspect-ratio: 1440 / 810;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.show-banner h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ===== PRODUCT SECTION ===== */
+.product-section {
+  background: #fff;
+  padding: 60px 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 120px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-body h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.product-body .detail {
+  font-size: 14px;
+  color: #555;
+  min-height: 40px;
+}
+
+.product-body .price {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* ===== CARD ACTIONS ===== */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-edit,
+.btn-delete {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-edit {
+  background: #ffc300;
+  color: #000;
+}
+
+.btn-delete {
+  background: #ff6b6b;
+  color: #fff;
+}
