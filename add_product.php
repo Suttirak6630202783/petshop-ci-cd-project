@@ -12,7 +12,7 @@ if (isset($_POST['add_product'])) {
     $name = $_POST['name'];
     $detail = $_POST['detail'];
     $price = $_POST['price'];
-    $quantity = $_POST['quantity'];
+    $stock = $_POST['stock'];
 
     $image = $_FILES['image']['name'];
     $tmp = $_FILES['image']['tmp_name'];
@@ -20,8 +20,8 @@ if (isset($_POST['add_product'])) {
     $newName = time() . "_" . $image;
     move_uploaded_file($tmp, "uploads/" . $newName);
 
-    $sql = "INSERT INTO products (name, detail, price, quantity, image)
-            VALUES ('$name','$detail','$price','$quantity','$newName')";
+    $sql = "INSERT INTO products (name, detail, price, stock, image)
+            VALUES ('$name','$detail','$price','$stock','$newName')";
 
     if (mysqli_query($conn, $sql)) {
         echo "<script>
@@ -81,7 +81,7 @@ if (isset($_POST['add_product'])) {
 
                         <div>
                             <label>จำนวน</label>
-                            <input type="number" name="quantity" required>
+                            <input type="number" name="stock" required>
                         </div>
 
                         <div class="upload-box">
