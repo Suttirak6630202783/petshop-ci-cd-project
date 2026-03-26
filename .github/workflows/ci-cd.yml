@@ -41,7 +41,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            # สั่งให้ Server ดึง Image ใหม่และรัน Container ของ PETSHOP
+
             docker pull pimsuksuttirak/petshop-app:latest
             docker stop petshop-container || true
             docker rm petshop-container || true
